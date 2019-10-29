@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TodoServiceService} from '../todo-service.service'
 
 @Component({
   selector: 'app-todo-item',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
+ dueDate : String ;
+ title : String; 
 
-  constructor() { }
+  
+  constructor() {
+
+    
+   }
 
   ngOnInit() {
   }
