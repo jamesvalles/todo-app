@@ -1,1 +1,8 @@
 <p>dashboard works!</p>
+<ul>
+    <li class="text" *ngFor="let item of items | async">
+      {{item.task}} {{item.dueDate}} 
+    </li>
+  </ul>
+  <button (click)="onSubmit()">Submit</button>
+  <button (click)="remove()">Remove</button>

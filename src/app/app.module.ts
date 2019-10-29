@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {TodoServiceService} from '../app/todo-service.service'
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
@@ -21,7 +21,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     TodoItemComponent,
     TodoListComponent,
     NewTodoItemComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
