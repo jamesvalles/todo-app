@@ -24,8 +24,12 @@ export class TodoServiceService {
  // this.db.collection('todos').add({task: taskContent, dueDate: dueDateContent});
 }
 
-updatedDueDate(){
-
+updatedDueDate(id: string, dueDateVal : String){
+ console.log("Due Date updated.")
+ this.db.collection("todos").doc(id).set({
+  dueDate: dueDateVal,
+  task : id
+})
 }
 
 

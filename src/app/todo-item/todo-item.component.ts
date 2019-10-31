@@ -32,6 +32,6 @@ export class TodoItemComponent implements OnInit {
   selectDueDate(date : String){
     console.log("Selected due date.")
     this.dueDate = date; 
-
+    this._dbService.updatedDueDate(this.id, this.dueDate);
   }
 }
