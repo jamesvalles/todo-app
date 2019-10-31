@@ -1,27 +1,30 @@
-# TodoApp
+James Valles
+Homework #4
+Web Applications 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+Github link: https://github.com/jamesvalles/todo-app.git
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Completed all aspects of the homework. 
 
-## Code scaffolding
+1) Setup firebase account as seen in environments, created a new project, and 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Extra Credit 1 **
+Followed all steps to integrate Firebase into the todo-app. 
 
-## Build
+Note: This app use the Firebase to update, remove, and add todo items. Connection 
+to the internet is needed. Step 1 is fully integrated in the todo-app. Create my own logic 
+instead of copying Medium article. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2). Create todo-app. Created the following components: dashboard, todo-item, todo-list, new-todo-item, page-not-found. Also created the service todo-service which handles all connections to Firebase for updating, removing, adding todo items. 
 
-## Running unit tests
+3) Added three colored buttons - urgent, days, week and is used to store DueDate for the task in Firebase. When button is pressed, NgClass directive is used to change button color and save dueDate state in Firebase. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4). Added routing: index page launches with dashboard component, if url is entered for which no resources or component and be found user is routed to pagenotfound. Added links to the dashboard for link routing. 
 
-## Running end-to-end tests
+4) a). Function to add new todo item to Firebase is complete. b.)function for updating the dueDate property in Firebase is complete. 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+**Extra Credit 2**
+Added function to remove todo item from Firebase. Added a button to remove to-do item from Firebase. 
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This was a great assignment that allowed me to experience Firebase, data binding, and routing. 
