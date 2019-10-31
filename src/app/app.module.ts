@@ -13,6 +13,7 @@ import { environment} from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, 
     AngularFireAuthModule, 
-    AngularFireStorageModule 
+    AngularFireStorageModule,
+    ReactiveFormsModule
   ],
   providers: [TodoServiceService],
   bootstrap: [AppComponent]

@@ -1,31 +1,42 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ChangeDetectionStrategy } from '@angular/core';
 import {Todo} from '../model/toDo'
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodoServiceService {
+  items: Observable<any[]>;
 
-  constructor() { 
+  constructor(private db : AngularFirestore){
+   this.items = db.collection('todos').valueChanges();   
+   }
+  
+  addTodo(taskContent: string, dueDateContent : String){
+  console.log("Pushed to database.")
+  this.db.collection("todos").doc(taskContent).set({
+    task: taskContent,
+    dueDate: dueDateContent
+})
 
-    let toDoOne = new Todo("Complete my Data Science Homework", "Urgent");
-    let toDoTwo = new Todo("Plan my next club meeting", "Days");
-    let toDoThree = new Todo("Plan upcoming trip to Cali", "Week");
-    let toDoFour = new Todo("Code project for work", "Urgent");
-  }
+
+ // this.db.collection('todos').add({task: taskContent, dueDate: dueDateContent});
 }
-var toDoList = [];
 
-function addTodo(){
-
-}
-
-function updatedDueDate(){
+updatedDueDate(){
 
 }
+
 
 //Extra Credit **Remove todo item**
 
-function removeTodo(){
+ removeTodo(id : string){
+  console.log("Removed from Firebase.")
+  this.db.collection("todos").doc(id).delete();
+   
 
 }
+}
+
+

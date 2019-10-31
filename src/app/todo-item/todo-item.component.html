@@ -1,5 +1,9 @@
-<div><p>todo-item works!</p>
-<button value="Urgent">Urgent</button>
-<button value="Days">Days</button>
-<button value="Week">Week</button>
+<div class = "todo">
+    <br>
+<p class="content"><b>{{task}}</b></p>
+<button [ngClass] = "dueDate === 'Urgent' ? 'selected-button' : 'buttons'" (click) = "selectDueDate('Urgent')" value="Urgent" value="Urgent">Urgent</button>
+<button [ngClass] = "dueDate === 'Days' ? 'selected-button' : 'buttons'" (click) = "selectDueDate('Days')" value="Days">Days</button>
+<button [ngClass] = "dueDate === 'Week' ? 'selected-button' : 'buttons'" (click) = "selectDueDate('Week')" value="Week">Week</button>
+<button class="buttons" (click) = "remove(id)"value="Week">Remove</button>
+
 </div>

@@ -7,8 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   {path:'dashboard', component: DashboardComponent },
-  {path:'add', component: NewTodoItemComponent },
-  {path:'', component: NewTodoItemComponent },
+  {path:'', component: DashboardComponent },
   {path:'**', component: PageNotFoundComponent },
 
 ];
@@ -18,4 +17,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [DashboardComponent, NewTodoItemComponent, PageNotFoundComponent]
+export const routingComponents = [DashboardComponent, PageNotFoundComponent]

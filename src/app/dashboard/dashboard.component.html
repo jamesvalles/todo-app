@@ -1,8 +1,7 @@
-<p>dashboard works!</p>
+<app-new-todo-item> </app-new-todo-item>
 <ul>
     <li class="text" *ngFor="let item of items | async">
-      {{item.task}} {{item.dueDate}} 
+        <app-todo-item [task] ="item.task" [dueDate] = "item.dueDate" [id] = "item.task" ></app-todo-item>
     </li>
   </ul>
-  <button (click)="onSubmit()">Submit</button>
-  <button (click)="remove()">Remove</button>
+  

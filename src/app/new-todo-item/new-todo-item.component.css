@@ -1,0 +1,27 @@
+.buttons{
+    margin: 8px;
+}
+
+.newtodo{
+    background-color: rgb(247, 244, 244);
+    margin: 10px;
+    width: 800px;
+    position: relative;
+    left: 40px;
+}
+
+.text-label{
+    margin: 10px;
+}
+
+.submit-button{
+    margin: 10px;
+}
+
+.selected-button{
+    margin: 8px;
+    background-color: green;
+}
+
+
+
