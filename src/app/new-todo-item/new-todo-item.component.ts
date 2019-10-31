@@ -29,6 +29,7 @@ export class NewTodoItemComponent implements OnInit {
     console.log("Onsubmit button pressed");
     this.task.reset;
     this._dbService.addTodo(this.task.value, this.selectedDueDate);
-
+    this.task.setValue("");
+    this.selectedDueDate = ""; 
   }
 }
